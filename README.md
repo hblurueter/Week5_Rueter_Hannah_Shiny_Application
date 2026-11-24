@@ -19,7 +19,7 @@ This Shiny app was built for ADS 506, Applied Time Series Analysis.
 3. In RStudio, install the packages below if needed. Open `app.R` and click **Run App**.
 
 ```r
-install.packages(c("shiny", "fpp3"))
+install.packages(c("shiny", "fpp3", "urca"))
 ```
 
 ## References and acknowledgments

@@ -7,7 +7,7 @@ This Shiny app was built for ADS 506, Applied Time Series Analysis.
 ## App features
 
 - Compare multiple wine varietals and adjust the historical date range.
-- - Set the validation window and future forecast horizon independently.
+- Set the validation window and future forecast horizon independently.
 - Review model specifications and compare training and validation RMSE, MAE, and MAPE.
 - See which model has the lowest validation RMSE for each varietal.
 - Toggle models on the validation and future forecast plots, which show 95% prediction intervals.

@@ -1,4 +1,6 @@
 library(fpp3)
+library(urca)
+library(shiny)
 
 wine_sales <- readr::read_csv(
   "AustralianWines.csv",
@@ -23,7 +25,7 @@ wine_sales <- readr::read_csv(
   ) |>
   as_tsibble(index = Month, key = Varietal)
 
-library(shiny)
+
 sales_dates <- as.Date(wine_sales$Month)
 
 ui <- fluidPage(
@@ -130,7 +132,8 @@ server <- function(input, output, session) {
       model(
         TSLM = TSLM(Sales ~ trend() + season()),
         ETS = ETS(Sales),
-        ARIMA = ARIMA(Sales)
+        ARIMA = ARIMA(Sales),
+        .safely = FALSE
       )
   })
   
